@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
+   
+    <title>littlestory</title>
     <style>
        *{
            margin: 0px;
            padding: 0px;
        }
        img{
-           width: 25%;
+           width:40%;
        }
        body{
            display: grid;
            grid-template-columns: 1fr;
-           grid-template-rows: 250px 250px 750px;
+
            gap: 15px;
            padding: 20px;
        }
-       header{
+        header{
            display: grid;
            grid-template-columns: 1fr;
-           grid-template-rows: repeat(2,1fr) ;   
+           grid-template-rows: 1fr 7fr;   
            gap: 5px; 
            align-items: center;
            justify-content: center;
-       }
-       header div{
-           background-color: violet;
-       }
+           width: 360px;
+           padding: 5px;
+       } 
+      #Juguetes{
+        
+      }
        main{
            display: grid;
            grid-template-columns: 1fr;
            grid-template-rows: 1fr;
            gap: 5px;
+           display: none;
        }
        main div{
            background-color: cyan;
@@ -43,20 +47,36 @@
        footer{
            display: grid;
            grid-template-columns: 1fr;
-           grid-template-rows: repeat(3,1fr);
+           grid-template-rows:1fr;
            gap: 5px;
+           
        }
        footer div{
            background-color: green;
            
        }
-       nav{
+       header nav:first-child{
            display: grid;
-           grid-template-columns: repeat(2,1fr);
-           grid-template-rows: repeat(2,1fr);
+           grid-template-columns: 5fr 1fr 1fr 1fr;
+           grid-template-rows: 1fr;
+           width: auto;
+           height: auto;
+           gap: 5pxs;
+           
+       }
+       header nav:last-child{
+           display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: repeat(9,1fr);
            width: 100%;
            height: 100%;
            gap: 5px;
+
+       }
+       header svg{
+           margin: 1rem;
+           width: 1rem;
+           height: 1rem;
        }
        
        @media (min-width: 600px){
@@ -72,26 +92,57 @@
         }
     </style>
 </head>
+<script src="https://unpkg.com/feather-icons"></script>
 <body>
-    <header>
-        <img src="img.jpg" alt="img">
+    <header> 
         <nav>
-            <div>
-              a
-             </div>
-            <div>
-                b
+            <img src="../Proyecto/assets/logo.jpg" alt="Logo Littlestory">
+            <a href="https://www.instagram.com/littlestory.uy/">
+                <i data-feather="instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/LittleStoryuy-101180458373507">
+                <i data-feather="facebook"></i>
+            </a>
+            <a href="">
+                <i data-feather="shopping-cart"></i>
+            </a>
+        </nav>
+        <nav>
+            <a href="../Proyecto/juguetes.html">
+                <div id="Juguetes">
+                Juguetes
+                </div>
+            </a>
+            <div id="Mordillos">
+                Mordillos  
             </div>
-            <div>
-                c
+            <div id="Rebozos">
+                Rebozos
             </div>
-            <div>
-                d
+            <div id="Chupetes">
+                Chupetes
+            </div>
+            <div id="Platos">
+                Platos
+            </div>
+            <div id="Baberos">
+                Baberos
+            </div>
+            <div id="Muselinas">
+                Muselinas
+            </div>
+            <div id="Portachupetes">
+                Portachupetes
+            </div>
+            <div id="Vasos">
+                Vasos
             </div>
         </nav>
+       
     </header>
     
     <main>
+        
         <div>
             e
         </div>
@@ -99,14 +150,27 @@
     
     <footer>
         <div>
-            f
-        </div>
-        <div>
-            g
-        </div>
-        <div>
-            h
+            Direccion y datos personales
         </div>
     </footer>
 </body>
+<script>
+    feather.replace()
+</script>
 </html>
+<!-- 
+      Implementar la página de ejemplo
+      
+      - Puedes obtener los iconos de de https://feathericons.com/
+        - Utiliza la guía rápida para configurarlo: https://github.com/feathericons/feather#quick-start
+      - Puedes utilizar unsplash para obtener la imagen https://unsplash.com/photos/EPELAdiIEx0
+      - Recuerda utilizar HTML semántico
+      - Recuerda utilizar media queries para crear una página responsiva
+
+      Piques:
+        - Flexbox y grid van a resultar muy útiles para este ejercicio
+        - La propiedad background-image nos permite utilizar una imagen como fondo de un elemento
+          - background-repeat
+          - background-size
+          - background-position
+     -->
