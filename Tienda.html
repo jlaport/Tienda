@@ -11,147 +11,125 @@
            margin: 0px;
            padding: 0px;
        }
-       img{
-           width:40%;
-       }
-       body{
-           display: grid;
-           grid-template-columns: 1fr;
+       header img{
+           width: 200px;
 
-           gap: 15px;
-           padding: 20px;
        }
-        header{
-           display: grid;
-           grid-template-columns: 1fr;
-           grid-template-rows: 1fr 7fr;   
-           gap: 5px; 
-           align-items: center;
-           justify-content: center;
-           width: 360px;
-           padding: 5px;
-       } 
-      #Juguetes{
-        
+       header {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10PX;
+        }
+       body{
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+      .categorias{
+            height: 300px;
+            background-size: cover;
+            text-decoration: none;
+            color:white;
+            font-size: 24px;
+            padding: 10px;
+            text-shadow: 0 0 3px black;
       }
-       main{
-           display: grid;
-           grid-template-columns: 1fr;
-           grid-template-rows: 1fr;
-           gap: 5px;
-           display: none;
-       }
-       main div{
-           background-color: cyan;
-       }
+       
        footer{
+           height: 200px;
+           padding: 10px;  
+           display: flex; 
+           align-items: flex-end;
+           justify-content: flex-end;
+       }
+       main nav{
            display: grid;
            grid-template-columns: 1fr;
-           grid-template-rows:1fr;
-           gap: 5px;
-           
-       }
-       footer div{
-           background-color: green;
-           
-       }
-       header nav:first-child{
-           display: grid;
-           grid-template-columns: 5fr 1fr 1fr 1fr;
-           grid-template-rows: 1fr;
-           width: auto;
-           height: auto;
-           gap: 5pxs;
-           
-       }
-       header nav:last-child{
-           display: grid;
-           grid-template-columns: 1fr;
-           grid-template-rows: repeat(9,1fr);
-           width: 100%;
-           height: 100%;
            gap: 5px;
 
        }
        header svg{
            margin: 1rem;
-           width: 1rem;
-           height: 1rem;
+           width: 2rem;
+           height: 2rem;
+       }
+       footer svg{
+           margin: 1rem;
+           width: 2rem;
+           height: 2rem;
        }
        
        @media (min-width: 600px){
            
+           main nav{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                gap: 5px;
+        }
            nav{
-               display: grid;
-               grid-template-columns: repeat(4,1fr);
-               grid-template-rows: 1fr;
-               gap: 5px;
-               height: 100%;
-               width: 100%;
+               
            }
+        }
+        @media (min-width: 800px){
+
         }
     </style>
 </head>
 <script src="https://unpkg.com/feather-icons"></script>
 <body>
     <header> 
+        <img src="../Proyecto/assets/logo.jpg" alt="Logo Littlestory">
         <nav>
-            <img src="../Proyecto/assets/logo.jpg" alt="Logo Littlestory">
+            <a href="">
+                <i data-feather="shopping-cart"></i>
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <nav>
+            
+            <a class="categorias" href="../Proyecto/juguetes.html" style="background-image: url(assets/Juguetes/vasos.jpg);">
+                 Juguetes
+            </a>
+            
+            <a class="categorias" href="" style="background-image: url(./assets/Mordillos/Mordillos.jpg);">
+                Mordillos  
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Rebozos/Rebozos.jpg);">
+                Rebozos
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Chupetes/Chupetes.jpg);">
+                Chupetes
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Platos/platos.jpg);">
+                Platos
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Baberos/baberos.jpg);">
+                Baberos
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Muselinas/Muselinas.jpg);">
+                Muselinas
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Portachupetes/portachupetes.jpg);">
+                Portachupetes
+            </a>
+            <a class="categorias" href="" style="background-image: url(./assets/Vasos/Vasos.jpg);">
+                Vasos
+            </a>
+        </nav>
+    </main>
+    
+    <footer>
+        <nav>
             <a href="https://www.instagram.com/littlestory.uy/">
                 <i data-feather="instagram"></i>
             </a>
             <a href="https://www.facebook.com/LittleStoryuy-101180458373507">
                 <i data-feather="facebook"></i>
             </a>
-            <a href="">
-                <i data-feather="shopping-cart"></i>
-            </a>
         </nav>
-        <nav>
-            <a href="../Proyecto/juguetes.html">
-                <div id="Juguetes">
-                Juguetes
-                </div>
-            </a>
-            <div id="Mordillos">
-                Mordillos  
-            </div>
-            <div id="Rebozos">
-                Rebozos
-            </div>
-            <div id="Chupetes">
-                Chupetes
-            </div>
-            <div id="Platos">
-                Platos
-            </div>
-            <div id="Baberos">
-                Baberos
-            </div>
-            <div id="Muselinas">
-                Muselinas
-            </div>
-            <div id="Portachupetes">
-                Portachupetes
-            </div>
-            <div id="Vasos">
-                Vasos
-            </div>
-        </nav>
-       
-    </header>
-    
-    <main>
-        
-        <div>
-            e
-        </div>
-    </main>
-    
-    <footer>
-        <div>
-            Direccion y datos personales
-        </div>
     </footer>
 </body>
 <script>
